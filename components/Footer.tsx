@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { ReactNode } from 'react'; // <-- ADDED ReactNode for typing children
 import { motion } from 'framer-motion';
 
+// --- NEW INTERFACE TO FIX COMPILATION ERROR ---
+interface SocialIconProps {
+    href: string;
+    children: ReactNode; // Represents the SVG content inside the component
+    label: string;
+    colorClass?: string;
+    viewBox?: string;
+}
+// ----------------------------------------------
+
 // Icons replaced with simple text/emoji fallbacks for compatibility
-const SocialIcon = ({ href, children, label, colorClass = "hover:text-white", viewBox = "0 0 24 24" }) => {
+// FIX: Applied the SocialIconProps interface here
+const SocialIcon = ({ href, children, label, colorClass = "hover:text-white", viewBox = "0 0 24 24" }: SocialIconProps) => {
     // Define the style for the social icons to match the image (white outline)
     const SOCIAL_ICON_STYLE = "text-white border-2 border-white rounded-full p-2 transition duration-300 hover:bg-white hover:text-black hover:scale-105";
 
