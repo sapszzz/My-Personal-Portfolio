@@ -1,7 +1,6 @@
 'use client'
-// Import the correct, external Footer component
-// New corrected import
-import Footer from '../components/Footer.tsx';
+// FIX: The .tsx extension has been removed to satisfy Next.js/TypeScript compiler rules.
+import Footer from '../components/Footer';
 import { FaPhone, FaEnvelope, FaLinkedin, FaMapMarkerAlt } from 'react-icons/fa';
 import { useEffect, useState, useMemo } from 'react';
 import { motion, useAnimation } from 'framer-motion';
@@ -236,7 +235,7 @@ const App = () => {
                   <span className="text-[#BA1B1B] blinking-cursor">|</span>
                 )}
               </h1>
-              <h2 className={`text-4xl sm:text-5xl font-extrabold text-white mb-8`}>
+              <h2 className="text-4xl sm:text-5xl font-extrabold text-white mb-8">
                 Sapuna Mongar
               </h2>
               <p className="text-lg sm:text-xl text-gray-200 leading-relaxed max-w-3xl md:max-w-full md:mx-0 mx-auto">
