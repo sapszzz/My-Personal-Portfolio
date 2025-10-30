@@ -264,7 +264,7 @@ export default function Navbar() {
                 {/* Logo/Name - Left Side */}
                 <Link href="/#hero" onClick={handleLinkClick} className="flex items-center">
                     <Image
-                        src="/images/brandlogo.jpg"
+                        src="/brandlogo.jpg"
                         alt="Brand Logo"
                         width={40}
                         height={40}
